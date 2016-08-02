@@ -16,6 +16,9 @@ def find_closest(lst, lfo):
         return 0
     if idx == len(lst):
         return idx - 1
+    # binary_search retrieves the index of the first element bigger than lfo, so
+    # we still need to check if the previous element (smaller or equal to lfo)
+    # has a shorter distance to lfo than the first bigger element.
     if lst[idx] - lfo > lfo - lst[idx - 1]:
         return idx - 1
     else:

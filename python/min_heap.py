@@ -53,7 +53,7 @@ def removeMin(heap):
     return retval
 
 def heapify(heap):
-    for i in reversed(range((len(heap)-1)//2)):
+    for i in reversed(range((len(heap))//2)):
         siftDown(heap, i)
 
 # Test insertions
